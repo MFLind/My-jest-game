@@ -2,6 +2,8 @@
  * @jest-environment jsdom
  */
 
+const { game } = require("../game");
+
 BeforAll(() => {
     let fs = require("fs");
     let fileContents = fs.readFileSync("index.html", "utf-8");
@@ -12,6 +14,6 @@ BeforAll(() => {
 
 describe("game object contains correct keys", () => {
     test("score key exists", () => {
-        
-    })
-})
+        expect("score" in game).toBe(true);
+    });
+});
