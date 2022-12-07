@@ -4,7 +4,7 @@
 
 const { game } = require("../game");
 
-BeforAll(() => {
+beforeAll(() => {
     let fs = require("fs");
     let fileContents = fs.readFileSync("index.html", "utf-8");
     document.open();
@@ -15,5 +15,8 @@ BeforAll(() => {
 describe("game object contains correct keys", () => {
     test("score key exists", () => {
         expect("score" in game).toBe(true);
+    });
+    test("currentGeme key exists", () => {
+        expect("currentGeme" in game).toBe(true);
     });
 });
