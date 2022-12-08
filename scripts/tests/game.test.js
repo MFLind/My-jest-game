@@ -48,7 +48,7 @@
     test("should clear the player moves array", () => {
         expect(game.playerMoves.length).toBe(0);
     });
-    test("should clear the computer sequence array", () => {
-        expect(game.currentGame.length).toBe(0);
+    test("should be one move in the computer's game array", () => {
+        expect(game.currentGame.length).toBe(1);
     });
 });
